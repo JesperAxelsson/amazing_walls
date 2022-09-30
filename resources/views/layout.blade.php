@@ -13,6 +13,8 @@
     <!-- Styles -->
     @vite('resources/css/app.css')
 
+    @stack('scripts')
+    
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -21,21 +23,22 @@
 </head>
 
 <body class="bg-gray-900 text-amber-600">
-    <div class="  flex w-screen justify-center">
+    <div class="flex w-screen justify-center">
         <div class="w-5/6 flex flex-col h-screen justify-between align-center">
 
-            <header class="h-10 m-5 shadow">
+            <header class=" m-5 shadow">
                 <div class="bg-gray-800 rounded p-3">
-                    <h1 class="indent-8 text-amber-800 font-bold text-3xl ">Amazing Walls!</h1>
+                    <a href="/">
+                        <h1 class="indent-8 text-amber-800 font-bold text-5xl w-fit">Amazing Walls!</h1>
+                    </a>
                 </div>
             </header>
 
-            <main class="h-100 mb-5 mx-5">
+            <main class="flex-1 mx-5">
                 @yield('content')
             </main>
 
-            <footer
-                class="h-10 m-5 rounded shadow md:flex md:items-center md:justify-between p-6 bg-gray-800">
+            <footer class="h-10 mx-5 mt-5 text-l rounded shadow md:flex md:items-center md:justify-between p-5 bg-gray-800">
                 Footsie stuff
             </footer>
         </div>

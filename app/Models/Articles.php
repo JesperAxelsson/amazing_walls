@@ -575,7 +575,7 @@ class Articles
         foreach ($objXmlDocument->article as $i => $obj) {
             array_push($arr, new Article($obj));
         }
-
+// dd($arr[0]->images[0]);
         return $arr;
     }
 
