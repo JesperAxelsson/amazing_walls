@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Article;
 use App\Models\Articles;
 
 /*
@@ -15,7 +16,7 @@ use App\Models\Articles;
 */
 
 Route::get('/', function () {
-    return view('welcome', [
+    return view('articlelist', [
         'articles' => Articles::all()
     ]);
 });
@@ -26,11 +27,3 @@ Route::get('/article/{id}', function ($id) {
         'article' => Articles::find($id)
     ]);
 });
- 
-
-
-Route::get('/json', function () {
-    return Response('{"id": 1}')
-        ->header("Content-Type", "text/plain");
-});
-
