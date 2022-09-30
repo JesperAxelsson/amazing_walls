@@ -596,12 +596,12 @@ class Articles
             array_push($arr, new Article($obj) );
         }
 
-        dd($arr);
+        // dd($arr);
         // dd($objXmlDocument->article[1]);
         // dd($objXmlDocument->articles);
        
-        $objJsonDocument = json_encode($objXmlDocument);
-        $arrOutput = json_decode($objJsonDocument, TRUE);
+        // $objJsonDocument = json_encode($objXmlDocument);
+        // $arrOutput = json_decode($objJsonDocument, TRUE);
         // dd($arrOutput);
         return $arr;
         // return $arrOutput['article'];
@@ -636,7 +636,7 @@ class Articles
         $articles = self::all();
 
         foreach ($articles as $article) {
-            if ($article['id'] == $id) {
+            if ($article->id == $id) {
                 return $article;
             }
         }
