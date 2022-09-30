@@ -2,27 +2,6 @@
 
 namespace App\Models;
 
-use SimpleXMLElement;
-
-class Article
-{
-    public function __construct(SimpleXMLElement $xml)
-    {
-        $this->id = $xml->id;
-        $this->productName = $xml->productName;
-        $this->descriptionTitle = $xml->descriptionTitle;
-        $this->descriptionText = $xml->descriptionText;
-    }
-
-    public string $id;
-    public string $productName;
-    public string $descriptionTitle;
-    public string $descriptionText;
-    // public $images;
-    // public $price;
-
-}
-
 class Articles
 {
     static $foo = '<?xml version="1.0"?>
@@ -583,6 +562,7 @@ class Articles
     public static function all()
     {
         $objXmlDocument = simplexml_load_string(self::$foo);
+        // $objXmlDocument = simpleXML_load_file('https://test.rebelwalls.com/articles.php');
 
         if ($objXmlDocument === FALSE) {
             echo "There were errors parsing the XML file.\n";
@@ -593,42 +573,10 @@ class Articles
         }
         $arr = array();
         foreach ($objXmlDocument->article as $i => $obj) {
-            array_push($arr, new Article($obj) );
+            array_push($arr, new Article($obj));
         }
 
-        // dd($arr);
-        // dd($objXmlDocument->article[1]);
-        // dd($objXmlDocument->articles);
-       
-        // $objJsonDocument = json_encode($objXmlDocument);
-        // $arrOutput = json_decode($objJsonDocument, TRUE);
-        // dd($arrOutput);
         return $arr;
-        // return $arrOutput['article'];
-        // return [
-        //     [
-        //         'id' => 1,
-        //         'productName' => "Dude Placeholder",
-        //         'descriptionTitle' => "Dude",
-        //         'descriptionText' => "Banan cupcake",
-        //         'images' =>  [],
-        //         'price' => [
-        //             'value' => 9.0,
-        //             'currency' => "EUR"
-        //         ]
-        //         ],
-        //         [
-        //             'id' => 2,
-        //             'productName' => "Cool Product",
-        //             'descriptionTitle' => "Not same title",
-        //             'descriptionText' => "Loooong text here mate",
-        //             'images' =>  [],
-        //             'price' => [
-        //                 'value' => 9.0,
-        //                 'currency' => "EUR"
-        //             ]
-        //         ]
-        // ];
     }
 
     public static function find($id)

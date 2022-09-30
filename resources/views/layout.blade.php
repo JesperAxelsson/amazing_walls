@@ -24,7 +24,7 @@
     <div class="  flex w-screen justify-center">
         <div class="w-5/6 flex flex-col h-screen justify-between align-center">
 
-            <header class="h-10 mx-5 shadow">
+            <header class="h-10 m-5 shadow">
                 <div class="bg-gray-800 rounded p-3">
                     <h1 class="indent-8 text-amber-800 font-bold text-3xl ">Amazing Walls!</h1>
                 </div>
@@ -35,7 +35,7 @@
             </main>
 
             <footer
-                class="h-10 mx-5 rounded p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 bg-gray-800">
+                class="h-10 m-5 rounded shadow md:flex md:items-center md:justify-between p-6 bg-gray-800">
                 Footsie stuff
             </footer>
         </div>
