@@ -1,3 +1,5 @@
+# Welcome to Amazing Walls web shop!
+
 ## Build instructions
 1. run `npm install` to install dependencies 
 2. run `npm run dev` to start vite dev server
