@@ -1,16 +1,18 @@
-<div class="w-48 h-48 mx-5 mb-5 bg-gray-900 rounded shadow">
+<div class="w-64 h-64 mx-5 mb-5 bg-gray-900 rounded shadow">
     <a href="/article/{{$article->id}}">
-        <img class="w-100" />
+        <img src="{{$article->images[0]->url}}" class="object-cover w-64 h-40 pb-1" />
 
         <div class="mx-auto sm:px-6 lg:px-8 text-amber-600">
-
-            <div class=" ">
-
+            <div class="font-bold ">
                 {{ $article->productName }}
             </div>
 
-            <div class=" text-amber-600">
+            <div class=" text-amber-600 text-sm">
                 {{ $article->descriptionTitle }}
+            </div>
+
+            <div class=" text-amber-600">
+                {{ $article->price->Formatted() }}
             </div>
         </div>
     </a>
