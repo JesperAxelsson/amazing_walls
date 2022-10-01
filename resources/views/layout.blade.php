@@ -24,22 +24,22 @@
 
 <body class="bg-gray-900 text-amber-600">
     <div class="flex w-screen justify-center">
-        <div class="w-5/6 flex flex-col h-screen justify-between align-center">
+        <div class="mx-5 sm:mx-0 lg:w-5/6 flex flex-col h-screen justify-between align-center">
 
-            <header class=" m-5 shadow">
-                <div class="bg-gray-800 rounded p-3">
+            <header class="my-5 sm:m-5 shadow">
+                <div class="bg-gray-800 rounded  p-3">
                     <a href="/">
-                        <h1 class="indent-8 text-amber-700 font-bold text-5xl w-fit">Amazing Walls!</h1>
+                        <h1 class="sm:indent-8 mx-auto lg:mx-0 text-amber-700 font-bold text-3xl md:text-5xl w-fit">Amazing Walls!</h1>
                     </a>
                 </div>
             </header>
 
-            <main class="flex-1 mx-5">
+            <main class="flex-1 sm:mx-5">
                 @yield('content')
             </main>
 
             <footer
-                class="h-10 mx-5 mt-5 text-l rounded shadow md:flex md:items-center md:justify-between p-5 bg-gray-800">
+                class="h-10 sm:mx-5 mt-3 sm:mt-5 p-2 sm:p-5 text-l rounded shadow md:flex md:items-center md:justify-between bg-gray-800">
                 <p>
                     © Copyright 2022
                 </p>

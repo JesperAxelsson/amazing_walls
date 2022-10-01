@@ -7,7 +7,7 @@
     }
 </script>
 
-<div class="flex-1 flex ">
+<div class="flex-1 flex">
     <img
         src={images[current].url}
         alt={images[current].alt}
@@ -22,9 +22,9 @@
             on:click={() => handleMouseOver(index)}
             src={image.thumbnail}
             alt={image.alt}
-            class="object-cover w-20 h-20 mr-4  border-solid border-4 + {index ==
+            class="object-cover w-20 h-20 mr-5 pb-1 border-solid border-b-4 + {index ==
             current
-                ? 'border-gray-600 '
+                ? 'border-gray-700 '
                 : 'border-transparent'}"
         />
     {/each}

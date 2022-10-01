@@ -6,12 +6,12 @@
 
 @section('content')
 
-<div class="bg-gray-800 shadow rounded h-full lg:flex p-5">
+<div class="bg-gray-800 shadow rounded h-full flex flex-col lg:flex-row p-5">
 
     <div id="carousel" data-images='@json($article->images)'
-        class="mr-5 p-3 bg-gray-900 rounded shadow w-full md:w-1/2 flex flex-col"></div>
+        class="lg:mr-5 p-3 bg-gray-900 rounded shadow w-full lg:w-1/2 flex flex-col"></div>
 
-    <div class="w-full md:w-1/2  flex flex-col">
+    <div class="w-full lg:w-1/2 flex flex-col">
         <div class="p-3 bg-gray-900 rounded shadow ">
             <div class="m-3">
                 <div class="flex justify-between">
