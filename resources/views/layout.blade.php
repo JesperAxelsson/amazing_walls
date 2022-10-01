@@ -14,7 +14,7 @@
     @vite('resources/css/app.css')
 
     @stack('scripts')
-    
+
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -29,7 +29,7 @@
             <header class=" m-5 shadow">
                 <div class="bg-gray-800 rounded p-3">
                     <a href="/">
-                        <h1 class="indent-8 text-amber-800 font-bold text-5xl w-fit">Amazing Walls!</h1>
+                        <h1 class="indent-8 text-amber-700 font-bold text-5xl w-fit">Amazing Walls!</h1>
                     </a>
                 </div>
             </header>
@@ -38,8 +38,11 @@
                 @yield('content')
             </main>
 
-            <footer class="h-10 mx-5 mt-5 text-l rounded shadow md:flex md:items-center md:justify-between p-5 bg-gray-800">
-                Footsie stuff
+            <footer
+                class="h-10 mx-5 mt-5 text-l rounded shadow md:flex md:items-center md:justify-between p-5 bg-gray-800">
+                <p>
+                    © Copyright 2022
+                </p>
             </footer>
         </div>
     </div>
