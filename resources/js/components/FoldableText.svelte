@@ -16,13 +16,19 @@
         {#if !expand}
             {data.text.substring(0, data.maxLength)}...
             <br />
-            <div class="cursor-pointer mt-2" on:click={handleExpandClicked}>
+            <div
+                class="cursor-pointer mt-2 text-sm"
+                on:click={handleExpandClicked}
+            >
                 See more
             </div>
         {:else}
             {data.text}
             <br />
-            <div class="cursor-pointer mt-2" on:click={handleCollapseClicked}>
+            <div
+                class="cursor-pointer mt-2 text-sm"
+                on:click={handleCollapseClicked}
+            >
                 See less
             </div>
         {/if}
